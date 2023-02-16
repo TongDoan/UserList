@@ -1,7 +1,6 @@
 import * as express from "express";
 import { HttpError, HttpStatusCodes, HttpParamValidators } from "../lib/http";
 import { UsersNS } from "./users";
-import { UserAuthNS } from "../auth/auth";
 
 export function NewUsersAPI(
   // userAuthBLL: UserAuthNS.BLL,

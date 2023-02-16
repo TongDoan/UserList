@@ -1,14 +1,5 @@
 export const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-export const ROLE = {
-  RECEPTIONIST: { name: "Tiếp Đón", value: "tiep_don" },
-  DOCTOR: { name: "Bác Sĩ", value: "bac_si" },
-  TEST_OPERATOR: { name: "Xét Nghiệm", value: "xet_nghiem" },
-  ACCOUNTER: { name: "Thu Ngân", value: "thu_ngan" },
-  PHARMACIST: { name: "Dược Sĩ", value: "duoc_si" },
-  ADMIN: { name: "Admin", value: "admin" },
-  // RECEPTIONIST: 'nhan_vien',
-};
 export const ROLE_ID = {
   1: { name: "Nhân Viên", value: 1 },
   2: { name: "Quản lý", value: 2 },

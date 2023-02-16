@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import { Button } from "reactstrap";
 import { Fragment } from "react";
-import { ROLE, ROLE_ID } from "../../../../../../Constances/const";
+import { ROLE_ID } from "../../../../../../Constances/const";
 
 class RowTable extends Component {
   onDelete = (id) => {

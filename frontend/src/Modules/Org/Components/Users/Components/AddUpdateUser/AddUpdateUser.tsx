@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input, Row, Col } from "reactstrap";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ModalConfirm from "../../../../../../Shared/Components/ModalConfirm/ModalConfirm";
 import ModalNoti from "../../../../../../Shared/Components/ModalNoti/ModalNoti";
 
-import { ROLE } from "../../../../../../Constances/const";
 import UsersService from "../../../../Shared/UsersService";
 export default class AddUpdateUser extends Component<any, any> {
   constructor(props: any) {

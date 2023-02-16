@@ -4,7 +4,6 @@ import ReactDOM from "react-dom";
 import { AuthService } from "./Shared";
 
 import App from "./Shared/Components/App/App";
-import Login from "./Modules/Org/Components/Login/Login";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Styles/index.scss";
@@ -30,11 +29,7 @@ const Root = (
           <Route
             path="/login"
             render={() => {
-              return !isLogged ? (
-                <Login></Login>
-              ) : (
-                <Redirect to="/app"></Redirect>
-              );
+              return <Redirect to="/app"></Redirect>;
             }}
           ></Route>
           <Route

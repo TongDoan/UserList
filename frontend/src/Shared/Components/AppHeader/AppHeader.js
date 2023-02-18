@@ -53,18 +53,18 @@ class AppHeader extends React.Component {
   render() {
     return (
       <Nav pills>
-        <Row className="appHeaderContainer">
+        <Row className="appHeaderContainer" style={{ margin: "0px" }}>
           <Col xs="2">
-            <NavItem className="mt-1">
+            <NavItem className="mt-2">
               <img
                 src={logo}
                 alt="img company"
-                style={{ width: 60, height: 30 }}
+                style={{ width: 50, height: 30 }}
               ></img>
             </NavItem>
           </Col>
 
-          <Col sm="8">
+          <Col sm="2">
             {/* {AuthService.hasRole(ROLE.ADMIN) ? */}
             <Row style={{ margin: "0px" }}>
               <Dropdown

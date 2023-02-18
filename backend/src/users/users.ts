@@ -6,7 +6,7 @@ export namespace UsersNS {
     username: string;
     first_name: string;
     last_name: string;
-    role_id: number;
+    role_id: string;
     phone: string;
     birthday: string;
     ctime: number;
@@ -17,7 +17,7 @@ export namespace UsersNS {
     username: string;
     first_name: string;
     last_name: string;
-    role_id: number;
+    role_id: string;
     phone: string;
     birthday: string;
   }
@@ -25,7 +25,7 @@ export namespace UsersNS {
   export interface UpdateUsersParams {
     first_name?: string;
     last_name?: string;
-    role_id?: number;
+    role_id?: string;
     phone?: string;
     birthday?: string;
   }

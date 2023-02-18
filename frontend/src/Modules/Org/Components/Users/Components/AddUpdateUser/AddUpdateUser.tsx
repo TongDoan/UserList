@@ -5,6 +5,7 @@ import ModalConfirm from "../../../../../../Shared/Components/ModalConfirm/Modal
 import ModalNoti from "../../../../../../Shared/Components/ModalNoti/ModalNoti";
 
 import UsersService from "../../../../Shared/UsersService";
+import { ROLE_ID } from "../../../../../../Constances/const";
 export default class AddUpdateUser extends Component<any, any> {
   constructor(props: any) {
     super(props);
@@ -168,14 +169,24 @@ export default class AddUpdateUser extends Component<any, any> {
             />
           </FormGroup>
           <FormGroup>
-            <Label>Mã chức vụ</Label>
+            <Label>Chức vụ</Label>
             <Input
-              type="text"
+              type="select"
               id="role_id"
               name="role_id"
               value={role_id}
-              onChange={(e: any) => this.onHandleChange1(e)}
-            />
+              onChange={(e: any) => this.onHandleChange(e)}
+            >
+              <option value="Chon">-Chọn chức vụ-</option>
+              {Object.keys(ROLE_ID).map((k: string, i: number) => (
+                <option
+                  key={i}
+                  value={ROLE_ID[k as keyof typeof ROLE_ID].value}
+                >
+                  {ROLE_ID[k as keyof typeof ROLE_ID].name}
+                </option>
+              ))}
+            </Input>
           </FormGroup>
           <FormGroup>
             <Label for="phone">Số điện thoại</Label>
@@ -192,8 +203,6 @@ export default class AddUpdateUser extends Component<any, any> {
             <input
               type="date"
               className="birthday form-control"
-              // min="1890-04-01"
-              // max="2050-04-20"
               name="birthday"
               min="01-04-1890"
               max="01-04-2050"
